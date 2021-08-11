@@ -1,9 +1,6 @@
 
 # pizza-hunt
 
-
-[GitHub license](https://img.shields.io/badge/license-Apache,MCT,ISC,GNU GPLv3-blue.svg)
-
 ## Table of Content
 
 - [Description](#Description)
