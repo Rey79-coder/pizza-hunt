@@ -1,0 +1,24 @@
+{
+  "name": "pizza-hunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rey79-coder/pizza-hunt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rey79-coder/pizza-hunt"
+  },
+  "homepage": "https://github.com/Rey79-coder/pizza-hunt",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
