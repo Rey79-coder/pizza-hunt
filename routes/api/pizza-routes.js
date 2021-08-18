@@ -1,3 +1,5 @@
+// easier-to-read code  // 
+
 const router = require('express').Router();
 
 const {
@@ -8,28 +10,17 @@ const {
     deletePizza
   } = require('../../controllers/pizza-controller');
 
-// // Set up GET all and POST at /api/pizzas
-// router
-//   .route('/')
-//   .get()
-//   .post();
+// /api/pizzas /  ALL PIZZAS  
+router
+  .route('/')
+  .get(getAllPizza)
+  .post(createPizza);
 
-// // Set up GET one, PUT, and DELETE at /api/pizzas/:id
-// router
-//   .route('/:id')
-//   .get()
-//   .put()
-//   .delete();
-
-// this code
+// /api/pizzas/:id   /   PER ID
 router
 .route('/:id')
 .get(getPizzaById)
 .put(updatePizza)
 .delete(deletePizza);
-
-// is this same as this
-// router.get('/', getCallbackFunction);
-// router.post('/' postCallbackFunction);
 
 module.exports = router;
