@@ -45,11 +45,12 @@ const PizzaSchema = new Schema(
 // create the Pizza model using the PizzaSchema
 const Pizza = model('Pizza', PizzaSchema);
 
-
 // get total count of comments and replies on retrieval
 PizzaSchema.virtual('commentCount').get(function() {
-  return this.comments.length;
+  return this.comments
+  .reduce((total, comment) => total + comment.replies.length + 1, 0);
 });
+
 
 // export the Pizza model
 module.exports = Pizza;
