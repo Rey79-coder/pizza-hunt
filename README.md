@@ -1,4 +1,3 @@
-
 # pizza-hunt
 
 ## Table of Content
