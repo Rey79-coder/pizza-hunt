@@ -1,3 +1,5 @@
+const dateFormat = require('../utils/dateFormat');
+
 const { Schema, model } = require('mongoose');
 // TO IMPORT THE PKGS FOR THE PROJECT.
 
@@ -14,6 +16,10 @@ const PizzaSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+      get: (createdAtVal) => dateFormat(createdAtVal)
+// getter in Mongoose, we just need to add the key get. 
+//IT will transform the data before it gets to the controller //
+
     },
     size: {
       type: String,
@@ -30,6 +36,7 @@ const PizzaSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
+      getters: true
     },
     id: false
   }
